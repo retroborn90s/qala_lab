@@ -4,7 +4,8 @@
     left: 0;
     display: block;
     transform: translateZ(0);
-    width:900%;left:-100%;
+    width:900%;
+    left:-100%;
 }
 
 .slick-track.slick-center {
