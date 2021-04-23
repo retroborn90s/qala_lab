@@ -8,11 +8,12 @@ import {NavLink} from "react-router-dom";
 const Header = (props) => {
 
     let logoImg;
-    if (props.color == "light")
+    if (props.color === "light")
     {
+
         logoImg = logo;
     }
-    else if(props.color == "dark")
+    else if(props.color === "dark")
     {
         logoImg = logo2;
     }
@@ -78,11 +79,11 @@ const Header = (props) => {
                     <div className="container">
 
                         <div className="header-menu">
-                            <a href="/releases" className="header-menu-item">НОВОСТИ</a>
-                            <a href="/chart" className="header-menu-item">ПРОЕКТЫ</a>
-                            <a href="/reviews" className="header-menu-item">КВARTИРА</a>
-                            <a href="/editions" className="header-menu-item">МЕРОПРИЯТИЯ</a>
-                            <a href="/editions" className="header-menu-item">О НАС</a>
+                            <NavLink to={"/news"} className="header-menu-item">НОВОСТИ</NavLink>
+                            <NavLink to={"/projects"} className="header-menu-item">ПРОЕКТЫ</NavLink>
+                            <NavLink to={"/kvartira"} className="header-menu-item">КВARTИРА</NavLink>
+                            <NavLink to={"/events"} className="header-menu-item">МЕРОПРИЯТИЯ</NavLink>
+                            <NavLink to={"/about"} className="header-menu-item">О НАС</NavLink>
                         </div>
                     </div>
                 </div>

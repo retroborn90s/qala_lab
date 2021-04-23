@@ -6,11 +6,11 @@ import {BrowserRouter} from "react-router-dom";
 
 const LayoutMain = (props)=>{
     return(
+
         <div>
+            <Header color = "light"></Header>
             <Slider/>
         </div>
-
-
 
     )
 }
