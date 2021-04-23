@@ -9,10 +9,12 @@ const PageNews = () =>{
 
     return(
         <div>
-            <Header color={"dark"}></Header>
+            <Header color={"dark"}/>
             <div data-fetch-key="NewsPage:0" className="news__container page" data-v-70979625="">
             <BlockNews/>
-        </div></div>
+
+        </div
+        ></div>
 
     )
 }
