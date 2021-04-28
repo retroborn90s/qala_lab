@@ -1207,7 +1207,6 @@
 
 .slide {
     height: 100vh;
-    height: calc(var(--vh, 1vh)*100);
     cursor: pointer;
     color: #fff;
     display: flex;
@@ -1218,7 +1217,6 @@
 @media(max-width:576px) {
     .slide {
         height: 100vh;
-        height: calc(var(--vh, 1vh)*100 - var(--mobile-menu-height, 0px))
     }
 }
 
@@ -1634,14 +1632,12 @@
 
 .skeleton {
     height: 100vh;
-    height: calc(var(--vh, 1vh)*100);
     background-color: #e0e0e0
 }
 
 @media(max-width:576px) {
     .skeleton {
         height: 100vh;
-        height: calc(var(--vh, 1vh)*100 - var(--mobile-menu-height, 0px))
     }
 }
 
@@ -3108,7 +3104,6 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    min-height: calc(var(--vh, 1vh)*100)
 }
 
 .error__code {
@@ -3296,13 +3291,11 @@ h6 {
 
 #__layout {
     padding-bottom: 0;
-    padding-bottom: var(--player-height, 0)
 }
 
 @media(max-width:576px) {
     #__layout {
         padding-bottom: 0;
-        padding-bottom: var(--mobile-menu-height, 0)
     }
 }
 
@@ -3942,13 +3935,11 @@ h6 {
 
 .search--opened {
     top: 53px;
-    top: calc(53px + var(--safe-top, 0px))
 }
 
 @media(max-width:576px) {
     .search--opened {
         top: 47px;
-        top: calc(47px + var(--safe-top, 0px));
         height: 80px
     }
 }
@@ -4034,7 +4025,6 @@ h6 {
     z-index: 150;
     transition: all .3s ease;
     padding-top: 0;
-    padding-top: var(--safe-top, 0);
 }
 
 .header--dark .header-base-socials__item,
@@ -5045,7 +5035,7 @@ h6 {
 
 .footer .socials__text {
     text-transform: uppercase;
-    font-family:'Proxima Nova';
+    font-family: 'Proxima Nova', serif;
     color: black;
 }
 
@@ -5297,7 +5287,7 @@ h6 {
     text-transform: uppercase;
     font-size: .80rem;
     font-weight: 700;
-    font-family: "Proxima Nova";
+    font-family: "Proxima Nova", serif;
     color: black;
 }
 
@@ -5364,7 +5354,6 @@ h6 {
     .player {
         height: 145px;
         bottom: 0;
-        bottom: var(--mobile-menu-height, 0)
     }
 }
 
@@ -5495,7 +5484,6 @@ h6 {
 
 .player .progress__dot {
     position: absolute;
-    bottom: .5px;
     cursor: pointer;
     width: 10px;
     height: 10px;
@@ -5541,7 +5529,6 @@ h6 {
 
 .player .progress-mobile-slider__dot {
     position: absolute;
-    bottom: .5px;
     cursor: pointer;
     width: 10px;
     height: 10px;
@@ -5771,7 +5758,6 @@ h6 {
 
 .player .volume-slider__dot {
     position: absolute;
-    bottom: .5px;
     cursor: pointer;
     width: 10px;
     height: 10px;
@@ -5871,7 +5857,6 @@ h6 {
     width: 100%;
     border-top: 1px solid #f7f6f6;
     background-color: #fff;
-    padding-bottom: env(safe-area-inset-bottom, 0)
 }
 
 @media(max-width:576px) {
@@ -6349,25 +6334,19 @@ svg:not(:root).svg-inline--fa {
 
 .svg-inline--fa .fa-primary {
     fill: currentColor;
-    fill: var(--fa-primary-color, currentColor);
-    opacity: 1;
-    opacity: var(--fa-primary-opacity, 1)
 }
 
 .svg-inline--fa .fa-secondary {
     fill: currentColor;
-    fill: var(--fa-secondary-color, currentColor)
 }
 
 .svg-inline--fa .fa-secondary,
 .svg-inline--fa.fa-swap-opacity .fa-primary {
     opacity: .4;
-    opacity: var(--fa-secondary-opacity, .4)
 }
 
 .svg-inline--fa.fa-swap-opacity .fa-secondary {
     opacity: 1;
-    opacity: var(--fa-primary-opacity, 1)
 }
 
 .svg-inline--fa mask .fa-primary,
@@ -6528,19 +6507,11 @@ svg:not(:root).svg-inline--fa {
 .swiper-button-prev {
     position: absolute;
     top: 50%;
-    width: 27px;
-    width: calc(var(--swiper-navigation-size)/44*27);
-    height: 44px;
-    height: var(--swiper-navigation-size);
-    margin-top: -22px;
-    margin-top: calc(var(--swiper-navigation-size)*-1/2);
     z-index: 10;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--swiper-theme-color);
-    color: var(--swiper-navigation-color, var(--swiper-theme-color))
 }
 
 .swiper-button-next.swiper-button-disabled,
@@ -6552,14 +6523,10 @@ svg:not(:root).svg-inline--fa {
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-    font-family: swiper-icons;
-    font-size: 44px;
-    font-size: var(--swiper-navigation-size);
-    text-transform: none !important;
     letter-spacing: 0;
     text-transform: none;
-    -moz-font-feature-settings: normal, ;
-    font-feature-settings: normal, ;
+    -moz-font-feature-settings: normal;
+    font-feature-settings: normal;
     font-variant: normal;
     line-height: 1
 }
@@ -6848,7 +6815,6 @@ button.swiper-pagination-bullet {
     border-left: 4px solid var(--swiper-theme-color);
     border-bottom: 4px solid var(--swiper-theme-color);
     border-right: 4px solid var(--swiper-theme-color);
-    border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
     border-radius: 50%;
     border-top: 4px solid transparent
 }
@@ -7113,8 +7079,6 @@ button.swiper-pagination-bullet {
 }
 
 .tns-t-ct {
-    width: 2333.3333333%;
-    width: 2333.33333%;
     position: absolute;
     right: 0
 }
@@ -7126,8 +7090,6 @@ button.swiper-pagination-bullet {
 }
 
 .tns-t-ct>div {
-    width: 1.4285714%;
-    width: 1.42857%;
     height: 10px;
     float: left
 }
@@ -7346,7 +7308,6 @@ button.swiper-pagination-bullet {
     border-radius: 50%;
     background-color: #fff;
     box-sizing: border-box;
-    box-shadow: .5px .5px 2px 1px rgba(0, 0, 0, .32)
 }
 
 .vue-slider-dot-handle-focus {
@@ -7892,22 +7853,16 @@ button.swiper-pagination-bullet {
 }
 
 .news__container {
-    padding-top: 130px;
-    padding-top: calc(130px + var(--safe-top, 0px));
     padding-bottom: 20px
 }
 
 @media(max-width:1199px) {
     .news__container {
-        padding-top: 105px;
-        padding-top: calc(105px + var(--safe-top, 0px))
     }
 }
 
 @media(max-width:576px) {
     .news__container {
-        padding-top: 50px;
-        padding-top: calc(50px + var(--safe-top, 0px))
     }
 }
 

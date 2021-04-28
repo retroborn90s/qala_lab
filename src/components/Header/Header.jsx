@@ -35,8 +35,8 @@ let logoImg;
 
   }
 
-  window.addEventListener('scroll', changeBackground, changeMenu);
-        window.addEventListener('scroll', changeMenu);
+  window.addEventListener('scroll', changeBackground);
+  window.addEventListener('scroll', changeMenu);
 
     if (props.color === "light")
     {

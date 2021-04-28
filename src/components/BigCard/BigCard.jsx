@@ -13,6 +13,7 @@ const BigCard = (props) =>{
         switchDonate="none"
     }
 
+
         return(
             <div className="news-card-container" style={{order:2}} data-v-863c6bcc="">
                 <div className="card" data-v-cded006a="" data-v-863c6bcc="">
