@@ -1,5 +1,6 @@
 import React from 'react';
 import exlusive from '../../../img/exlusive.jpg'
+import './../../style.css'
 const MainNews = () =>{
     return(<div className="exclusive exclusive"  data-v-0cf95ae8>
         <div className="exclusive-background" >

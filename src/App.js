@@ -28,7 +28,7 @@ function App() {
                       <Route exact path={"/events"} component={Events}/>
                       <Route exact path={"/about"} component={About}/>
                       <Footer/>
-                      <MobileNav></MobileNav>
+                      <MobileNav/>
                   </div>
               </div>
           </div>

@@ -1,21 +1,104 @@
-.interesting__container
-{
-    background-color: white;
-}
-body{
-    background-color: white;
-}
-
-.header.active{
-    background-color: white;
-    color: black;
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    transform: translateZ(0);
+    width:900%;
+    left:-100%;
 }
 
-.header-menu.active
-{
+.slick-track.slick-center {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.slick-track:after,
+.slick-track:before {
+    display: table;
+    content: ""
+}
+
+.slick-track:after {
+    clear: both
+}
+
+.slick-loading .slick-track {
+    visibility: hidden
+}
+
+.slick-slide {
     display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px
 }
 
+[dir=rtl] .slick-slide {
+    float: right
+}
+
+.slick-slide img {
+    display: block
+}
+
+.slick-slide.slick-loading img {
+    display: none
+}
+
+.slick-slide.dragging img {
+    pointer-events: none
+}
+
+.slick-initialized .slick-slide {
+    display: block
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent
+}
+
+.slick-arrow.slick-hidden {
+    display: none
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    transform: translateZ(0)
+}
+
+.slick-list:focus {
+    outline: none
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand
+}
 
 .heading {
     position: relative;
@@ -835,7 +918,7 @@ body{
 
 .slider {
     position: relative;
-    height: 100vh
+    height: 100vh;
 }
 
 @media(max-width:576px) {
@@ -906,8 +989,6 @@ body{
         height: 100vh;
     }
 }
-
-
 
 .slide__wrapper {
     position: relative;
@@ -1100,6 +1181,7 @@ body{
     font-size: 1.25vh;
     line-height: 2vh;
     font-weight: 500;
+    opacity: .6
 }
 
 .nav-slider {
@@ -2387,7 +2469,8 @@ body{
 }
 
 .interesting__container {
-    margin-top: 25px
+    margin-top: 25px;
+    margin-bottom: 25px
 }
 
 @media(max-width:767px) {
@@ -2601,13 +2684,11 @@ body{
 
 @media(max-width:767px) {
     .reviews__container {
-        margin-top: 40px
     }
 }
 
 @media(max-width:576px) {
     .reviews__container {
-        margin-top: 45px
     }
 }
 
@@ -2858,7 +2939,7 @@ body{
 
 @font-face {
     font-family: Proxima Nova;
-    src: url(./fonts/ProximaNova-Light.woff);
+    src: url(../../fonts/ProximaNova-Light.woff);
     font-style: normal;
     font-weight: 400;
     font-display: swap
@@ -2866,7 +2947,7 @@ body{
 
 @font-face {
     font-family: Proxima Nova;
-    src: url(./fonts/ProximaNova-Regular.woff);
+    src: url(../../fonts/ProximaNova-Regular.woff);
     font-style: normal;
     font-weight: 500;
     font-display: swap
@@ -2874,7 +2955,7 @@ body{
 
 @font-face {
     font-family: Proxima Nova;
-    src: url(./fonts/ProximaNova-Semibold.woff);
+    src: url(../../fonts/ProximaNova-Semibold.woff);
     font-style: normal;
     font-weight: 600;
     font-display: swap
@@ -2882,7 +2963,7 @@ body{
 
 @font-face {
     font-family: Proxima Nova;
-    src: url(./fonts/ProximaNova-Bold.woff);
+    src: url(../../fonts/ProximaNova-Bold.woff);
     font-style: normal;
     font-weight: 700;
     font-display: swap
@@ -2890,7 +2971,7 @@ body{
 
 @font-face {
     font-family: Proxima Nova;
-    src: url(./fonts/ProximaNova-Extrabold.woff);
+    src: url(../../fonts/ProximaNova-Extrabold.woff);
     font-style: normal;
     font-weight: 800;
     font-display: swap
@@ -2898,7 +2979,7 @@ body{
 
 @font-face {
     font-family: Proxima Nova;
-    src: url(./fonts/ProximaNova-Black.woff);
+    src: url(../../fonts/ProximaNova-Black.woff);
     font-style: normal;
     font-weight: 900;
     font-display: swap
@@ -2906,7 +2987,7 @@ body{
 
 @font-face {
     font-family: Matroska;
-    src: url(./fonts/Matroska.ttf);
+    src: url(../../fonts/Matroska.ttf);
     font-style: normal;
     font-weight: 400;
     font-display: swap
@@ -2928,14 +3009,6 @@ html {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box
 }
-.header-menu__container.active
-{
-    transform: translateY(-100%);
-    z-index: -1;
-    display: none;
-    transition: 50ms;
-}
-
 
 *,
 :after,
@@ -4704,7 +4777,7 @@ h6 {
 
 .footer .socials {
     padding: 45px 40px 40px;
-    background-color: white;
+    background-color: #d9d9d9;
 ;
 }
 
@@ -4729,8 +4802,8 @@ h6 {
 
 .footer .socials__text {
     text-transform: uppercase;
-    font-family:'Proxima Nova';
-    color: black;
+    font-family: "Proxima Nova";
+
 }
 
 @media(max-width:1479px) {
@@ -4982,7 +5055,6 @@ h6 {
     font-size: .80rem;
     font-weight: 700;
     font-family: "Proxima Nova";
-    color: black;
 }
 
 @media(max-width:576px) {
@@ -7745,7 +7817,5 @@ button.swiper-pagination-bullet {
 {
     display: none;
 }
-
-
 
 
