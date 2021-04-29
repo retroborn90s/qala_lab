@@ -13,7 +13,11 @@ body{
 
 .header-menu.active
 {
-    display: none;
+    transition: 50ms;
+    padding: 0 !important;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
 
@@ -2930,10 +2934,10 @@ html {
 }
 .header-menu__container.active
 {
-    transform: translateY(-100%);
-    z-index: -1;
-    display: none;
-    transition: 50ms;
+    padding: 0 !important;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
 
@@ -3998,12 +4002,7 @@ h6 {
     }
 }
 
-.header-menu__container {
-    padding: 15px 0 12px;
-    height: auto;
-    opacity: 1;
-    transition: all .3s ease
-}
+
 
 @media(max-width:576px) {
     .header-menu__container {
