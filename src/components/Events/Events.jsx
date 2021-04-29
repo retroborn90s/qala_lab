@@ -7,10 +7,10 @@ const Events = () =>{
     return(
         <div>
             <Header color={"dark"}/>
-            <div className="news__container page" >
+            <div className="news__container page">
                 <BlockEvents/>
-            </div
-            ></div>
+            </div>
+        </div>
        )
 }
 
