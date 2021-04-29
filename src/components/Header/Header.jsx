@@ -7,12 +7,13 @@ import './../style.css'
 
 let logoImg;
 
-    const Header = (props) => {
-    const [header,setWrapper ] =useState(false);
-    const [menu,setNav] =useState(false);
-  const changeMenu = ()=>
+const Header = (props) => {
+    const [header,setWrapper ] = useState(false);
+    const [menu,setNav] = useState(false);
+    const changeMenu = () =>
         {
-            if ( window.scrollY > 100 && window.scrollY > scrollPrev )
+            let scrolled = window.scrollY;
+            if ( scrolled > 100 && scrolled > scrollPrev )
             {
                 setNav(true)
             }
@@ -23,9 +24,11 @@ let logoImg;
 
         }
 
+
+
         let scrollPrev = window.scrollY;
-  const changeBackground = ()=>{
-      if(window.scrollY >= 80)
+        const changeBackground = ()=>{
+      if(window.scrollY >= 100)
       {
           setWrapper(true)
       }
